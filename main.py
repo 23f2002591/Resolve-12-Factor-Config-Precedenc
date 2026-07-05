@@ -34,6 +34,7 @@ def coerce(key, value):
 # -------------------------
 # Endpoint
 # -------------------------
+@app.get("/")
 @app.get("/effective-config")
 def effective_config(set: list[str] = Query(default=[])):
     # Layer 1: defaults
